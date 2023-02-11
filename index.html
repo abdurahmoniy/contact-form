@@ -12,9 +12,7 @@
             box-sizing: border-box;
         }
 
-        input[type=text],
-        select,
-        textarea {
+        .text {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
@@ -25,8 +23,8 @@
             resize: vertical;
         }
 
-        input[type=submit] {
-            background-color: #04AA6D;
+        .submit{
+            background-color: #00ADB5;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -34,7 +32,7 @@
             cursor: pointer;
         }
 
-        input[type=submit]:hover {
+        .submit:hover {
             background-color: #45a049;
         }
 
@@ -42,26 +40,32 @@
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
+            margin: 0 auto;
+            width: 500px;
+        }
+        .head {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
 
-    <h3>Contact Me</h3>
+    <h3 class="head">Contact Me</h3>
 
     <div class="container">
         <form method="POST" data-netlify="true">
             <label for="fname">Name</label>
-            <input type="text" name="name" placeholder="Your name..">
+            <input type="text" name="name" class="text" placeholder="Your name..">
 
             <label for="fname">Email</label>
-            <input type="text" name="email" placeholder="Your email..">
+            <input type="email" name="email" class="text" placeholder="Your email..">
 
             <label for="subject">Subject</label>
-            <textarea id="subject" placeholder="Write something.." ></textarea>
+            <textarea id="subject" placeholder="Write something.." class="text" ></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit" class="submit" value="Submit">
+            <a class="submit" href="#" style="text-decoration: none;">Back</a>
         </form>
     </div>
 
